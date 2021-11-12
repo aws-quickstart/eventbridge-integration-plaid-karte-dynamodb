@@ -1,0 +1,12 @@
+{
+  "name": "write-to-dynamo-from-karte",
+  "version": "0.1.0",
+  "repository": "https://github.com",
+  "author": "Amazon Web Services",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.976.0"
+  },
+  "scripts": {},
+  "devDependencies": {}
+}
