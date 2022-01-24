@@ -1,12 +1,10 @@
-# eventbridge-integration-plaid-karte-dynamodb
-## Amazon EventBridge Integration Solution: Store end-user data in DynamoDB in real-time 
+## PLAID KARTE DynamoDB EventBridge integration
 
-This Quick Start deploys an integration with AWS DynamoDB, AWS Lambda and AWS SNS for Amazon EventBridge SaaS Partner Integrations with PLAID. 
-The solution leverages KARTE's customer service actions to send any end-user's data to the Amazon EventBridge event bus and store the data in DynamoDB via AWS SNS and AWS Lambda when the events are matched.
+This Amazon EventBridge integration combines the PLAID KARTE software as a service (SaaS) with Amazon DynamoDB, Amazon Web Services (AWS) Lambda, and Amazon EventBridge to  store user data in Amazon DynamoDB in real time.
 
-With low code, KARTE user data can be stored in real time in various DBs such as DynamoDB on AWS. By using this data in your system, you can improve the expressiveness of your system more flexibly.
+KARTE sends events that contain user data such as ID, recently visited pages, total purchase amount, active campaigns, and other data defined by the KARTE user. You can specify event data as raw code using the KARTE administration window.  
 
-![Quick Start architecture for EventBridge Integration Solution for DynamoDB](images/arch-eventbridge-integration-plaid-karte-dynamodb.png)
+![Quick Start architecture for EventBridge integration for DynamoDB](images/eventbridge-plaid-karte-dynamodb-architecture-diagram.png)
 
 To post feedback, submit feature ideas, or report bugs, use the Issues section of [this GitHub repo](https://github.com/aws-quickstart/eventbridge-integration-solution-karte-dynamodb-integration).
 
