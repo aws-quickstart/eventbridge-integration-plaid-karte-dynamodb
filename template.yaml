@@ -28,15 +28,15 @@ Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
       - Label:
-          default: Amazon EventBridge Integration Solution
+          default: Amazon EventBridge integration solution
         Parameters:
           - EventSourceName
           - DyanamoDBTableName
     ParameterLabels:
       EventSourceName:
-        default: Event Source Name
+        default: Event source name
       DyanamoDBTableName:
-        default: DynamoDB Table Name
+        default: DynamoDB table name
 
 Parameters:
   EventSourceName:
@@ -44,10 +44,10 @@ Parameters:
     AllowedPattern: ^aws\.partner\/karte\.io(\/[\.\-_a-z0-9]+){3}$
     MinLength: 1
     MaxLength: 256
-    Description: Name of the Amazon EventBridge KARTE Event Source to associate with an Event Bus. For example, aws.partner/karte.io/{AWSAccountID}/{KARTEProjectId}/{AppName}
+    Description: Name of the Amazon EventBridge KARTE event source to associate with an event bus (for example, aws.partner/karte.io/{AWSAccountID}/{KARTEProjectId}/{AppName}).
   DyanamoDBTableName:
     Type: String
-    Description: Name of DynamoDB Table
+    Description: Name of DynamoDB table
 
 Globals:
   Function:
@@ -148,14 +148,14 @@ Resources:
 
 Outputs:
   EventBridgeEventBus:
-    Description: SaaS Event Bus ARN
+    Description: SaaS event bus ARN
     Value: !GetAtt EventBridgeEventBus.Arn
   EventBridgeRule:
-    Description: EventBridge Rule ARN
+    Description: EventBridge rule ARN
     Value: !GetAtt EventBridgeRule.Arn
   WriteToDynamoLambdaFunction:
     Description: WriteToDynamoLambdaFunction ARN
     Value: !GetAtt WriteToDynamoLambdaFunction.Arn
   SNSTopic:
-    Description: SNSTopic TopicName
+    Description: SNS Topic topic name
     Value: !GetAtt SNSTopic.TopicName
